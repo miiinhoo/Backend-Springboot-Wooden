@@ -7,6 +7,9 @@ WORKDIR /app
 # 프로젝트 전체 복사
 COPY . .
 
+# mvnw 실행 권한 추가
+RUN chmod +x mvnw
+
 # 빌드 실행
 RUN ./mvnw clean package -DskipTests
 
